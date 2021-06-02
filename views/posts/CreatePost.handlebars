@@ -1,0 +1,23 @@
+<section id="postBlock" class="card col-md-4 mx-auto my-4">
+    <article class="card-body">
+        <h2 class="display-5 text-center font-weight-bold text-uppercase text-primary">Create Post</h2>
+        {{!-- handleba looping --}}
+        {{#each errors}}
+        <h4 style="color: red;">{{text}}</h4>
+        {{else}}
+        {{/each}}
+        {{!-- handlebar looping end here --}}
+        <form action="/posts/create-post" method="POST">
+            <div class="form-group">
+                 <label for="title">Title</label>
+                 <input type="text" class="form-control" name="title" placeholder="enter post title" ></div>
+            <div class="form-group">
+                 <label for="details">details</label>
+                 <textarea name="details" id="details" class="form-control" cols="30" rows="10" ></textarea></div>
+            <div class="form-group"> 
+                <button class="btn btn-outline-primary btn-block my-2">Create Post</button>
+            
+            </div>
+        </form>
+    </article>
+</section>
